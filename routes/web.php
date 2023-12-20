@@ -15,3 +15,4 @@ use App\Http\Controllers\ViewController;
 */
 
 Route::get('/', [ViewController::class, 'index']);
+Route::get('/post/{id}', [ViewController::class, 'show']);

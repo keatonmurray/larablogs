@@ -11,4 +11,9 @@ class ViewController extends Controller
         $blogs = Blogs::all();
         return view('pages.index')->with('blogs', $blogs);
     }
+
+    public function show($id) {
+        $blogs = Blogs::find($id);
+        return view('pages.show')->with('blogs', $blogs);
+    }
 }
