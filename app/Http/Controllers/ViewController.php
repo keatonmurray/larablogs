@@ -9,6 +9,6 @@ class ViewController extends Controller
 {
     public function index() {
         $blogs = Blogs::all();
-        return view('pages.index', $blogs);
+        return view('pages.index')->with('blogs', $blogs);
     }
 }
