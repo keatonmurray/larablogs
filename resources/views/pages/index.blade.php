@@ -1,6 +1,11 @@
 @extends('main.layout')
 @section('content')
-    @include('partials.header')
+<header class="masthead" style="background-image:url('{{asset('assets/img/home-bg.jpg')}}')">
+    <x-header-container>
+        <h1>Larablogs</h1>
+        <span class="subheading">A blogsite by Keaton Murray.</span>
+    </x-header-container>
+</header>
     <!-- Main Content-->
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
