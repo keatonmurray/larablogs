@@ -12,6 +12,10 @@ class ViewController extends Controller
         return view('pages.index')->with('blogs', $blogs);
     }
 
+    public function create() {
+        return view('pages.create');
+    }
+
     public function show($id) {
         $blogs = Blogs::find($id);
         return view('pages.show')->with('blogs', $blogs);
