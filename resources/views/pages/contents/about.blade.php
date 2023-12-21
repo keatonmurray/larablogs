@@ -1,11 +1,11 @@
 @extends('main.layout')
 @section('content')
-<header class="masthead" style="background-image:url('{{asset('assets/img/about-bg.jpg')}}')">
-    <x-header-container>
-        <h1>About Me</h1>
-        <span class="subheading">This is what I do.</span>
-    </x-header-container>
-</header>
+    <header class="masthead" style="background-image:url('{{asset('assets/img/about-bg.jpg')}}')">
+        <x-header-container>
+            <h1>About Me</h1>
+            <span class="subheading">This is what I do.</span>
+        </x-header-container>
+    </header>
     <!-- Main Content-->
     <main class="mb-4">
         <div class="container px-4 px-lg-5">

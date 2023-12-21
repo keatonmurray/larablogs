@@ -2,21 +2,17 @@
 @section('content')
     <!-- Page Header-->
     <header class="masthead" style="background-image: url('{{asset('assets/img/post-bg.jpg')}}')">
-        <div class="container position-relative px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <div class="post-heading">
-                        <h1>{{$blogs->title}}</h1>
-                        <h2 class="subheading">{{$blogs->subtext}}</h2>
-                        <span class="meta">
-                            Posted by
-                            <a href="#!">{{$blogs->author}}</a>
-                            on {{$blogs->created_at}}
-                        </span>
-                    </div>
-                </div>
+        <x-header-container>
+            <div class="post-heading">
+                <h1>{{$blogs->title}}</h1>
+                <h2 class="subheading">{{$blogs->subtext}}</h2>
+                <span class="meta">
+                    Posted by
+                    <a href="#!">{{$blogs->author}}</a>
+                    on {{$blogs->created_at}}
+                </span>
             </div>
-        </div>
+        </x-header-container>
     </header>
     <!-- Post Content-->
     <article class="mb-4">
