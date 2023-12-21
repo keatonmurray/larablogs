@@ -1,6 +1,6 @@
 @extends('main.layout')
 @section('content')
-    <header class="masthead" style="background-image:url('{{asset('assets/img/bg1.jpg')}}')">
+    <header class="masthead" style="background-image:url('{{asset('assets/img/create-post-bg.jpg')}}')">
         <x-header-container>
             <h1>Write Blog</h1>
             <span class="subheading">Make something great. Share it to the world.</span>
