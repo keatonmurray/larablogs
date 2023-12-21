@@ -1,6 +1,6 @@
 @extends('main.layout')
 @section('content')
-    <header class="masthead" style="background-image:url('{{asset('assets/img/home-bg.jpg')}}')">
+    <header class="masthead" style="background-image:url('{{asset('assets/img/bg2.jpg')}}')">
         <x-header-container>
             <h1>Larablogs</h1>
             <span class="subheading">A blogsite by Keaton Murray.</span>
