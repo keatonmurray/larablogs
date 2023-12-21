@@ -16,6 +16,10 @@ class ViewController extends Controller
         return view('pages.create');
     }
 
+    public function store() {
+        echo "Post saved!";
+    }
+
     public function show($id) {
         $blogs = Blogs::find($id);
         return view('pages.show')->with('blogs', $blogs);

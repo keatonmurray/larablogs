@@ -16,7 +16,8 @@
      <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/store">
+                    @csrf
                     <div class="form-floating">
                         <input class="form-control" id="title" type="text" placeholder="Enter your title..." data-sb-validations="required" />
                         <label for="title">Post Title</label>
@@ -57,7 +58,7 @@
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
-                    <button class="btn btn-primary text-uppercase disabled" id="submitButton" type="submit">Send</button>
+                    <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Post now</button>
                 </form>
                 <script>
                     ClassicEditor
