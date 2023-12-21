@@ -23,7 +23,7 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    {{$blogs->body}}                   
+                    {!!$blogs->body!!}                   
                     <h2 class="section-heading">Reaching for the Stars</h2>
                     <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
                     <a href="#!"><img class="img-fluid" src="{{asset('assets/img/post-sample-image.jpg')}}" alt="..." /></a>
