@@ -18,3 +18,4 @@ use App\Http\Controllers\PagesController;
 Route::get('/', [ViewController::class, 'index']);
 Route::get('/post/{id}', [ViewController::class, 'show']);
 Route::get('/about-us', [PagesController::class, 'about']);
+Route::get('/contact-us', [PagesController::class, 'contact']);
