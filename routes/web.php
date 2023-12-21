@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,4 @@ use App\Http\Controllers\ViewController;
 
 Route::get('/', [ViewController::class, 'index']);
 Route::get('/post/{id}', [ViewController::class, 'show']);
+Route::get('/about-us', [PagesController::class, 'about']);
