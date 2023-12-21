@@ -19,23 +19,23 @@
                 <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/store">
                     @csrf
                     <div class="form-floating">
-                        <input class="form-control" id="title" type="text" placeholder="Enter your title..." data-sb-validations="required" />
+                        <input class="form-control" id="title" type="text" name="title" placeholder="Enter your title..." data-sb-validations="required" />
                         <label for="title">Post Title</label>
                         <div class="invalid-feedback" data-sb-feedback="title:required">A title is required.</div>
                     </div>
                     <div class="form-floating">
-                        <input class="form-control" id="subtext" type="text" placeholder="Enter your subtext..." data-sb-validations="required,subtext" />
+                        <input class="form-control" id="subtext" type="text" name="subtext" placeholder="Enter your subtext..." data-sb-validations="required,subtext" />
                         <label for="subtext">Subtext</label>
                         <div class="invalid-feedback" data-sb-feedback="subtext:required">A subtext is required.</div>
                         <div class="invalid-feedback" data-sb-feedback="subtext:subtext">subtext is not valid.</div>
                     </div>
                     <div class="form-floating">
-                        <input class="form-control" id="author" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                        <input class="form-control" id="author" type="text" name="author" placeholder="Enter your name..." data-sb-validations="required" />
                         <label for="author">Author</label>
                         <div class="invalid-feedback" data-sb-feedback="author:required">A author name is required.</div>
                     </div>
                     <div class="form-floating">
-                        <textarea class="form-control" id="editor" placeholder="Write post content here..." style="height: 12rem" data-sb-validations="required"></textarea>
+                        <textarea class="form-control" id="editor" name="body" placeholder="Write post content here..." style="height: 12rem" data-sb-validations="required"></textarea>
                         <label for="editor"></label>
                         <div class="invalid-feedback" data-sb-feedback="message:required">A message body is required.</div>
                     </div>

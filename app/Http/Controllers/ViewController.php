@@ -16,8 +16,16 @@ class ViewController extends Controller
         return view('pages.create');
     }
 
-    public function store() {
-        echo "Post saved!";
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'title' => 'required',
+            'subtext' => 'required',
+            'author' => 'required',
+            'body' => 'required'
+        ]);
+
+        Blogs::create($formFields);
+        return redirect('/')->with('message', 'Listing created successfully!');
     }
 
     public function show($id) {
