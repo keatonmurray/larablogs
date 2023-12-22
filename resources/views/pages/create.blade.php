@@ -11,7 +11,7 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    <p>Inspired to write something interesting? Fill out the form below for the world to read your post!</p>
+                    <p>Inspired to write something interesting? Fill out the form below for the world to read!</p>
                     <div class="my-5">
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/store" enctype="multipart/form-data">
                             @csrf
