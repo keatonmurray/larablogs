@@ -27,6 +27,8 @@
                         <!-- Divider-->
                         <hr class="my-4" />
                     @endforeach
+                    @else
+                    <p class="text-muted text-center">There are currently no stories to fetch</p>
                 @endif
             </div>
         </div>

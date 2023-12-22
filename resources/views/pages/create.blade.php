@@ -15,10 +15,21 @@
                     <div class="my-5">
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/store" enctype="multipart/form-data">
                             @csrf
+                            @error('title')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            @error('subtext')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            @error('author')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            @error('body')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                             <div class="form-floating">
                                 <input class="form-control" id="title" type="text" name="title" placeholder="Enter a title..." data-sb-validations="required" />
                                 <label for="title">Post Title</label>
-                                <div class="invalid-feedback" data-sb-feedback="title:required">A title is required.</div>
                             </div>
                             <div class="form-floating">
                                 <input class="form-control" id="subtext" type="text" name="subtext" placeholder="Enter a subtext..." data-sb-validations="required,subtext" />
@@ -33,7 +44,7 @@
                             </div>
                             <div class="form-floating">
                                 <input class="form-control" id="image" type="file" name="image" placeholder="Select a JPG/JPEG file to upload..." data-sb-validations="required" />
-                                <label for="image">Background Thumbnail Image</label>
+                                <label for="image">Header Image</label>
                                 <div class="invalid-feedback" data-sb-feedback="image:required">A background image is required.</div>
                             </div>
                             <div class="form-floating">

@@ -17,7 +17,7 @@ use App\Http\Controllers\PagesController;
 
 Route::get('/', [ViewController::class, 'index']);
 Route::get('/post/{id}', [ViewController::class, 'show']);
-Route::get('/create-post', [ViewController::class, 'create']);
+Route::get('/create-post', [ViewController::class, 'create'])->name('ckeditor.upload');;
 Route::get('/about-us', [PagesController::class, 'about']);
 Route::get('/contact-us', [PagesController::class, 'contact']);
 Route::post('/store', [ViewController::class, 'store']);
