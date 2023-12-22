@@ -11,17 +11,17 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    <p>Inspired to write something interesting? Fill out the form below, and let the world see your post!</p>
+                    <p>Inspired to write something interesting? Fill out the form below for the world to read your post!</p>
                     <div class="my-5">
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/store">
                             @csrf
                             <div class="form-floating">
-                                <input class="form-control" id="title" type="text" name="title" placeholder="Enter your title..." data-sb-validations="required" />
+                                <input class="form-control" id="title" type="text" name="title" placeholder="Enter a title..." data-sb-validations="required" />
                                 <label for="title">Post Title</label>
                                 <div class="invalid-feedback" data-sb-feedback="title:required">A title is required.</div>
                             </div>
                             <div class="form-floating">
-                                <input class="form-control" id="subtext" type="text" name="subtext" placeholder="Enter your subtext..." data-sb-validations="required,subtext" />
+                                <input class="form-control" id="subtext" type="text" name="subtext" placeholder="Enter a subtext..." data-sb-validations="required,subtext" />
                                 <label for="subtext">Subtext</label>
                                 <div class="invalid-feedback" data-sb-feedback="subtext:required">A subtext is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="subtext:subtext">subtext is not valid.</div>
@@ -30,6 +30,11 @@
                                 <input class="form-control" id="author" type="text" name="author" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="author">Author</label>
                                 <div class="invalid-feedback" data-sb-feedback="author:required">A author name is required.</div>
+                            </div>
+                            <div class="form-floating">
+                                <input class="form-control" id="image" type="file" name="image" placeholder="Select a JPG/JPEG file to upload..." data-sb-validations="required" />
+                                <label for="image">Background Thumbnail Image</label>
+                                <div class="invalid-feedback" data-sb-feedback="image:required">A background image is required.</div>
                             </div>
                             <div class="form-floating">
                                 <textarea class="form-control" id="editor" name="body" placeholder="Write post content here..." style="height: 12rem" data-sb-validations="required"></textarea>
