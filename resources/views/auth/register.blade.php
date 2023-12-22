@@ -1,6 +1,6 @@
 @extends('main.layout')
 @section('content')
-    <header class="masthead" style="background-image:url('{{asset('assets/img/post-bg.jpg')}}'); margin-top: -100px">
+    <header class="masthead" style="background-image:url('{{asset('assets/img/astronaut.jpg')}}'); margin-top: -100px">
         <x-header-container>
             <h1>Signup</h1>
             <span class="subheading">Create an account to share your first post!</span>
