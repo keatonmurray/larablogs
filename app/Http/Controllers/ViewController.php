@@ -24,6 +24,10 @@ class ViewController extends Controller
             'body' => 'required'
         ]);
 
+        if($request->hasFile('image')) {
+            $formFields['image'] = $request->file('image')->store('images', 'public');
+        }
+
         Blogs::create($formFields);
         return redirect('/')->with('message', 'Listing created successfully!');
     }

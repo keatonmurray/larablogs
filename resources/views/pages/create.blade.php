@@ -13,7 +13,7 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <p>Inspired to write something interesting? Fill out the form below for the world to read your post!</p>
                     <div class="my-5">
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/store">
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/store" enctype="multipart/form-data">
                             @csrf
                             <div class="form-floating">
                                 <input class="form-control" id="title" type="text" name="title" placeholder="Enter a title..." data-sb-validations="required" />
