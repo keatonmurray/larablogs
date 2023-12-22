@@ -20,4 +20,5 @@ Route::get('/post/{id}', [ViewController::class, 'show']);
 Route::get('/create-post', [ViewController::class, 'create'])->name('ckeditor.upload');;
 Route::get('/about-us', [PagesController::class, 'about']);
 Route::get('/contact-us', [PagesController::class, 'contact']);
+Route::get('/edit-post/{id}', [ViewController::class, 'edit']);
 Route::post('/store', [ViewController::class, 'store']);

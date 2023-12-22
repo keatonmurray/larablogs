@@ -37,7 +37,7 @@ class ViewController extends Controller
         return view('pages.show')->with('blogs', $blogs);
     }
 
-    public function edit() {
+    public function edit($id) {
         return view('pages.edit');
     }
 }
