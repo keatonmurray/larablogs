@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ViewController extends Controller
 {
+
+    public function __construct() {
+        $this->middleware('auth');
+    }
+    
     public function index() {
         $blogs = Blogs::all();
         return view('pages.index')->with('blogs', $blogs);
