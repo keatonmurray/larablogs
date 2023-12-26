@@ -21,9 +21,6 @@
                             @error('subtext')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
-                            @error('author')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
                             @error('body')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
@@ -36,11 +33,6 @@
                                 <label for="subtext">Subtext</label>
                                 <div class="invalid-feedback" data-sb-feedback="subtext:required">A subtext is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="subtext:subtext">subtext is not valid.</div>
-                            </div>
-                            <div class="form-floating">
-                                <input class="form-control" id="author" type="text" name="author" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="author">Author</label>
-                                <div class="invalid-feedback" data-sb-feedback="author:required">A author name is required.</div>
                             </div>
                             <div class="form-floating">
                                 <input class="form-control" id="image" type="file" name="image" placeholder="Select a JPG/JPEG file to upload..." data-sb-validations="required" />

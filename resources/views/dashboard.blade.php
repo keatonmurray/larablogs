@@ -11,6 +11,7 @@
                     {{ __("You're logged in!") }}
                 </div>
             </div>
+            <a href="/create-post"></a>
         </div>
     </div>
 </x-app-layout>

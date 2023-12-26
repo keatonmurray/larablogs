@@ -10,6 +10,8 @@
                     Posted by
                     <a href="#!">{{$blogs->author}}</a>
                     on {{$blogs->created_at}}
+                    by 
+                    {{$blogs->user->name}}
                 </span>
             </div>
         </x-header-container>

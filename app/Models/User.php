@@ -6,6 +6,7 @@ namespace App\Models;
 use App\Models\Blogs;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -45,6 +46,6 @@ class User extends Authenticatable
     ];
 
     public function blogs(): HasOne {
-        return $this->hasOne(Blogs::class);
+        return $this->hasOne(Blogs::class, 'name');
     }
 }

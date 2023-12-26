@@ -22,10 +22,10 @@ class ViewController extends Controller
     }
 
     public function store(Request $request) {
+
         $formFields = $request->validate([
             'title' => 'required',
             'subtext' => 'required',
-            'author' => 'required',
             'body' => 'required'
         ]);
 
@@ -33,7 +33,13 @@ class ViewController extends Controller
             $formFields['image'] = $request->file('image')->store('images', 'public');
         }
 
-        Blogs::create($formFields);
+        $blogs = new Blogs;
+        $blogs->title = $request->input('title');
+        $blogs->subtext = $request->input('subtext');
+        $blogs->body = $request->input('body');
+        $blogs->user_id = auth()->user()->id;
+        $blogs->save();
+
         return redirect('/')->with('message', 'Listing created successfully!');
     }
 
