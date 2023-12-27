@@ -5,7 +5,7 @@
         <x-header-container>
             <div class="post-heading">
                 <h1>{{$blogs->title}}</h1>
-                <h2 class="subheading">{{$blogs->subtext}}</h2>
+                <h2 class="subheading">{{Str::limit($blogs->title, 30)}}</h2>
                 <span class="meta">
                     Posted by
                     <a href="#!">{{$blogs->author}}</a>
