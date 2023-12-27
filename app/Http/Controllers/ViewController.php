@@ -25,7 +25,6 @@ class ViewController extends Controller
 
         $formFields = $request->validate([
             'title' => 'required',
-            'subtext' => 'required',
             'body' => 'required',
         ]);
 

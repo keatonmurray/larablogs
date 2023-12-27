@@ -18,21 +18,12 @@
                             @error('title')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
-                            @error('subtext')
+                            @error('body')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
-                            @error('body')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
                             <div class="form-floating">
                                 <input class="form-control" id="title" type="text" name="title" placeholder="Enter a title..." data-sb-validations="required" />
                                 <label for="title">Post Title</label>
-                            </div>
-                            <div class="form-floating">
-                                <input class="form-control" id="subtext" type="text" name="subtext" placeholder="Enter a subtext..." data-sb-validations="required,subtext" />
-                                <label for="subtext">Subtext</label>
-                                <div class="invalid-feedback" data-sb-feedback="subtext:required">A subtext is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="subtext:subtext">subtext is not valid.</div>
                             </div>
                             <div class="form-floating">
                                 <input class="form-control" id="image" type="file" name="image" placeholder="Select a JPG/JPEG file to upload..." />
