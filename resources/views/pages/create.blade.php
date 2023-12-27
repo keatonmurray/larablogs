@@ -35,7 +35,7 @@
                                 <div class="invalid-feedback" data-sb-feedback="subtext:subtext">subtext is not valid.</div>
                             </div>
                             <div class="form-floating">
-                                <input class="form-control" id="image" type="file" name="image" placeholder="Select a JPG/JPEG file to upload..." data-sb-validations="required" />
+                                <input class="form-control" id="image" type="file" name="image" placeholder="Select a JPG/JPEG file to upload..." />
                                 <label for="image">Header Image</label>
                                 <div class="invalid-feedback" data-sb-feedback="image:required">A background image is required.</div>
                             </div>

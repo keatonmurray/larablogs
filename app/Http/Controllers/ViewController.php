@@ -26,20 +26,20 @@ class ViewController extends Controller
         $formFields = $request->validate([
             'title' => 'required',
             'subtext' => 'required',
-            'body' => 'required'
+            'body' => 'required',
         ]);
 
         if($request->hasFile('image')) {
             $formFields['image'] = $request->file('image')->store('images', 'public');
         }
 
-        $blogs = new Blogs;
-        $blogs->title = $request->input('title');
-        $blogs->subtext = $request->input('subtext');
-        $blogs->body = $request->input('body');
-        $blogs->user_id = auth()->user()->id;
-        $blogs->save();
-
+        Blogs::create([
+            'title' => request('title'),
+            'subtext' => request('subtext'),
+            'body' => request('body'),
+            'image' => request('image'),
+            'user_id' => auth()->id()
+        ]);
         return redirect('/')->with('message', 'Listing created successfully!');
     }
 
