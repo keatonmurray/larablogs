@@ -33,13 +33,9 @@ class ViewController extends Controller
             $formFields['image'] = $request->file('image')->store('images', 'public');
         }
 
-        Blogs::create([
-            'title' => request('title'),
-            'subtext' => request('subtext'),
-            'body' => request('body'),
-            'image' => request('image'),
-            'user_id' => auth()->id()
-        ]);
+        $formFields['user_id'] = auth()->id();
+
+        Blogs::Create($formFields);
         return redirect('/')->with('message', 'Listing created successfully!');
     }
 
