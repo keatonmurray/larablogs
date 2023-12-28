@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProfileController;
@@ -26,6 +27,6 @@ Route::post('/store', [ViewController::class, 'store']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [HomeController::class, 'index']);
 
 require __DIR__.'/auth.php';

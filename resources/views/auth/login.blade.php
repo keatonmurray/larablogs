@@ -1,4 +1,4 @@
-@extends('main.layout')
+@extends('layouts.app')
 @section('content')
     <header class="masthead" style="background-image:url('{{asset('assets/img/astronaut.jpg')}}'); margin-top: -100px">
         <x-header-container>
