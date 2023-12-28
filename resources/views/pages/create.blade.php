@@ -1,4 +1,4 @@
-@extends('main.layout')
+@extends('layouts.app')
 @section('content')
     <header class="masthead" style="background-image:url('{{asset('assets/img/create-post-bg.jpg')}}')">
         <x-header-container>

@@ -1,4 +1,4 @@
-@extends('main.layout')
+@extends('layouts.app')
 @section('content')
     <!-- Page Header-->
     <header class="masthead" style="background-image: url('{{asset('storage/' . $blogs->image)}}')">
