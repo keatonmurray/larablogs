@@ -31,8 +31,8 @@
                                         <td>
                                             <form action="" method="POST">
                                                 @csrf
-                                                <a href="" class="btn btn-secondary">Edit</a>
-                                                <button class="btn btn-danger" type="submit">Delete</button>
+                                                <a href="/edit-post/{{$blog->id}}" class="btn btn-secondary btn-sm">Edit</a>
+                                                <button class="btn btn-danger btn-sm" type="submit">Delete</button>
                                             </form>
                                         </td>
                                     </tr>
