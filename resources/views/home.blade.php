@@ -38,7 +38,7 @@
                                     </tr>
                                 @endforeach
                                 @else
-                                <p>No have currently not posted anything</p>
+                                <p>You have currently not posted anything</p>
                             @endif
                         </table>
                     </div>

@@ -24,6 +24,7 @@ Route::get('/about-us', [PagesController::class, 'about']);
 Route::get('/contact-us', [PagesController::class, 'contact']);
 Route::get('/edit-post/{id}', [ViewController::class, 'edit']);
 Route::post('/store', [ViewController::class, 'store']);
+Route::put('/update/{id}', [ViewController::class, 'update']);
 
 Auth::routes();
 

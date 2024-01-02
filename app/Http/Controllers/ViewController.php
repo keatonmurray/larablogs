@@ -48,7 +48,17 @@ class ViewController extends Controller
         return view('pages.edit')->with('blogs', $blogs);
     }
 
-    public function update() {
+    public function update(Request $request, Blogs $id) {
+        $formFields = $request->validate([
+            'title' => 'required',
+            'body' => 'required',
+        ]);
 
+        if($request->hasFile('image')) {
+            $formFields['image'] = $request->file('image')->store('images', 'public');
+        }
+
+        $id->update($formFields);
+        return redirect('/');
     }
 }

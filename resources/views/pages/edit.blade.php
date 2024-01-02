@@ -13,8 +13,9 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <p>Missed something? Fill out the form below for the world to read your edited post!</p>
                     <div class="my-5">
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/update" enctype="multipart/form-data">
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST" action="/update/{{$blogs->id}}" enctype="multipart/form-data">
                             @csrf
+                            @method('PUT')
                             @error('title')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
