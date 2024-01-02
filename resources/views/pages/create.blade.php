@@ -54,7 +54,10 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Post now</button>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Post Now</button>
+                                <a href="/dashboard" class="btn btn-secondary text-uppercase" id="submitButton" type="button">Go to Dashboard</a>
+                            </div>
                         </form>
                     </div>
                     <script>
