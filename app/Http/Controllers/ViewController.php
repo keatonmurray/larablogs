@@ -61,4 +61,8 @@ class ViewController extends Controller
         $id->update($formFields);
         return redirect('/');
     }
+
+    public function destroy() {
+        
+    }
 }
