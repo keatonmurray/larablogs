@@ -48,6 +48,9 @@
                                         <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">
                                             {{ __('Log in') }}
                                         </button>
+                                        <a href="/register" class="btn btn-primary text-uppercase" id="submitButton" type="button">
+                                            {{ __('Signup') }}
+                                        </a>
                                     </div>
                                 </form>
                             </div>
