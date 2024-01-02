@@ -44,6 +44,11 @@ class ViewController extends Controller
     }
 
     public function edit($id) {
-        return view('pages.edit');
+        $blogs = Blogs::find($id);
+        return view('pages.edit')->with('blogs', $blogs);
+    }
+
+    public function update() {
+
     }
 }

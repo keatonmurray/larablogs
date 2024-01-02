@@ -9,7 +9,7 @@
 <div class="container py-4">
     <div class="text-center">
         <a href="/create-post" class="btn btn-primary">Create New Post</a>
-        <a href="/" class="btn btn-primary">See More</a>
+        <a href="/" class="btn btn-primary">Show All</a>
     </div>
     <br>
     <div class="row justify-content-center">
