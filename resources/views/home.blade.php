@@ -27,7 +27,7 @@
                             @if(count($blogs)  > 0)
                                 @foreach($blogs as $blog)
                                     <tr>
-                                        <td>{{$blog->title}}</td>
+                                        <td><a href="/post/{{$blog->id}}" class="fw-bold text-decoration-none text-black">{{$blog->title}}</a></td>
                                         <td>
                                             <form action="" method="POST">
                                                 @csrf
