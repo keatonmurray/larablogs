@@ -26,16 +26,21 @@
                             </tr>
                             @if(count($blogs)  > 0)
                                 @foreach($blogs as $blog)
-                                    <tr>
-                                        <td><a href="/post/{{$blog->id}}" class="fw-bold text-decoration-none text-black">{{$blog->title}}</a></td>
-                                        <td>
-                                            <form action="" method="POST">
-                                                @csrf
-                                                <a href="/edit-post/{{$blog->id}}" class="btn btn-secondary btn-sm">Edit</a>
-                                                <button class="btn btn-danger btn-sm" type="submit">Delete</button>
-                                            </form>
-                                        </td>
-                                    </tr>
+                                    <div class="d-flex">
+                                        <tr>
+                                            <td>
+                                                <a href="/post/{{$blog->id}}" class="fw-bold text-decoration-none text-black">{{$blog->title}}</a></td>
+                                            <td>
+                                                <form action="" method="POST">
+                                                    @csrf
+                                                    <div class="d-flex gap-2 d-md-flex">
+                                                        <a href="/edit-post/{{$blog->id}}" class="btn btn-secondary">Edit</a>
+                                                        <button class="btn btn-danger" type="submit">Delete</button>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    </div>
                                 @endforeach
                                 @else
                                 <p>You have currently not posted anything</p>
