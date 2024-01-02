@@ -62,7 +62,11 @@ class ViewController extends Controller
         return redirect('/');
     }
 
-    public function destroy() {
-        
+    public function destroy(string $id) {
+
+        $blog = Blogs::find($id);
+        $blog->delete();
+
+        return redirect('/');
     }
 }
