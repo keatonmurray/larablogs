@@ -8,10 +8,8 @@
                 <h2 class="subheading">{{Str::limit($blogs->title, 30)}}</h2>
                 <span class="meta">
                     Posted by
-                    <a href="#!">{{$blogs->author}}</a>
-                    on {{$blogs->created_at}}
-                    by 
                     {{$blogs->user->name}}
+                    on {{$blogs->created_at}}
                 </span>
             </div>
         </x-header-container>
