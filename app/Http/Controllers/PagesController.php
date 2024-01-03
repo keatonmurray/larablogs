@@ -13,4 +13,8 @@ class PagesController extends Controller
     public function contact() {
         return view('pages.contents.contact');
     }
+
+    public function location() {
+        return view('pages.contents.location');
+    }
 }
