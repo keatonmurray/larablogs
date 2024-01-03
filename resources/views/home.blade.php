@@ -44,7 +44,7 @@
                                     </div>
                                 @endforeach
                                 @else
-                                <p>You have currently not posted anything</p>
+                                <p>You haven't posted anything yet</p>
                             @endif
                         </table>
                     </div>

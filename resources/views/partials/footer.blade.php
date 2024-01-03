@@ -29,7 +29,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="small text-center text-muted fst-italic">Copyright &copy; Larablogs 2023</div>
+                <div class="small text-center text-muted fst-italic">Copyright &copy; {{config('app.name')}} 2023</div>
             </div>
         </div>
     </div>

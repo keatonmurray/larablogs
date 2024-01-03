@@ -13,7 +13,7 @@ class ViewController extends Controller
     }
     
     public function index() {
-        $blogs = Blogs::all();
+        $blogs = Blogs::orderBy('created_at', 'desc')->get();
         return view('pages.index')->with('blogs', $blogs);
     }
 
