@@ -3,7 +3,7 @@
     <header class="masthead" style="background-image:url('{{asset('assets/img/home-bg.jpg')}}')">
         <x-header-container>
             <h1>Larablogs</h1>
-            <span class="subheading">A blogsite by Keaton Murray.</span>
+            <span class="subheading">A blogsite about space</span>
         </x-header-container>
     </header>
     <!-- Main Content-->
@@ -11,6 +11,7 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <!-- Post preview-->
+                <h3 class="text-center text-uppercase border-bottom mb-2 pb-2">Explore Blogs</h3>
                 @if(count($blogs) > 0)
                     @foreach($blogs as $blog)
                         <div class="post-preview">
@@ -20,12 +21,10 @@
                             </a>
                             <p class="post-meta">
                                 Posted by
-                                <a href="#!">{{$blog->author}}</a>
+                                {{$blog->user->name}}
                                 on {{$blog->created_at}}
                             </p>
                         </div>
-                        <!-- Divider-->
-                        <hr class="my-4" />
                     @endforeach
                     @else
                     <p class="text-muted text-center">There are currently no stories to fetch</p>
