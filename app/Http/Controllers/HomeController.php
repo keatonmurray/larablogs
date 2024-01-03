@@ -22,9 +22,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(string $id)
     {
-        $blogs = Blogs::all();
-        return view('home')->with('blogs', $blogs);
+        $blog = Blogs::find($id);
+        return view('home')->with('blog', $blog);
     }
 }
