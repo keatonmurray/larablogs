@@ -29,6 +29,6 @@ Route::delete('/delete/{id}', [ViewController::class, 'destroy']);
 
 Auth::routes();
 
-Route::get('/dashboard/{id}', [HomeController::class, 'index']);
+Route::get('/dashboard', [HomeController::class, 'index']);
 
 require __DIR__.'/auth.php';

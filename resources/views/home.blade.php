@@ -24,22 +24,28 @@
                                 <th>Post Title</th>
                                 <th>Action</th>
                             </tr>
-                            <div class="d-flex">
-                                <tr>
-                                    <td>
-                                        <a href="/post/{{$blog->id}}" class="fw-bold text-decoration-none text-black">{{$blog->title}}</a></td>
-                                    <td>
-                                        <form action="/delete/{{$blog->id}}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <div class="d-flex gap-2 d-md-flex">
-                                                <a href="/edit-post/{{$blog->id}}" class="btn btn-secondary">Edit</a>
-                                                <button class="btn btn-danger" type="submit">Delete</button>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                            </div>
+                            @if(count($blogs)  > 0)
+                                @foreach($blogs as $blog)
+                                    <div class="d-flex">
+                                        <tr>
+                                            <td>
+                                                <a href="/post/{{$blog->id}}" class="fw-bold text-decoration-none text-black">{{$blog->title}}</a></td>
+                                            <td>
+                                                <form action="/delete/{{$blog->id}}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <div class="d-flex gap-2 d-md-flex">
+                                                        <a href="/edit-post/{{$blog->id}}" class="btn btn-secondary">Edit</a>
+                                                        <button class="btn btn-danger" type="submit">Delete</button>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    </div>
+                                @endforeach
+                                @else
+                                <p>You have currently not posted anything</p>
+                            @endif
                         </table>
                     </div>
                 </div>

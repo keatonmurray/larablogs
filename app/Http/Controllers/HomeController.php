@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Blogs;
 use Illuminate\Http\Request;
 
@@ -22,9 +23,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(string $id)
+    public function index()
     {
-        $blog = Blogs::find($id);
-        return view('home')->with('blog', $blog);
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
+        return view('home')->with('blogs', $user->blogs);
     }
 }
