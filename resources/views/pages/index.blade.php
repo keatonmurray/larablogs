@@ -11,7 +11,7 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <!-- Post preview-->
-                <h3 class="text-center text-uppercase border-bottom mb-2 pb-2">Explore Blogs</h3>
+                <h4 class="text-center text-uppercase border-bottom mb-2 pb-2">Explore Our Blogs</h4>
                 @if(count($blogs) > 0)
                     @foreach($blogs as $blog)
                         <div class="post-preview">
