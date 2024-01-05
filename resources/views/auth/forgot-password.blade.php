@@ -23,7 +23,7 @@
                                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                         </div>
                                     </div>
-                                    <div class="flex items-center justify-end mt-4">
+                                    <div class="d-flex gap-2 justify-content-center mt-4">
                                         <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">
                                             {{ __('Send Reset Link') }}
                                         </button>
