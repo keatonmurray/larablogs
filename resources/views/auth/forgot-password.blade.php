@@ -25,7 +25,7 @@
                                     </div>
                                     <div class="d-flex gap-2 justify-content-center mt-4">
                                         <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">
-                                            {{ __('Send Reset Link') }}
+                                            {{ __('Send Link') }}
                                         </button>
                                         <a href="/" class="btn btn-primary text-uppercase" id="submitButton" type="buttong">
                                             {{ __('Go Back') }}
