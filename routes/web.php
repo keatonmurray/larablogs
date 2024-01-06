@@ -29,7 +29,7 @@ Route::post('/store', [ViewController::class, 'store']);
 Route::put('/update/{id}', [ViewController::class, 'update']);
 Route::delete('/delete/{id}', [ViewController::class, 'destroy']);
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/dashboard', [HomeController::class, 'index']);
 
