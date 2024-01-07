@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <header class="masthead" style="background-image:url('{{asset('assets/img/create-post-bg.jpg')}}')">
+    <header class="masthead" style="background-image:url('{{asset('assets/img/space.jpg')}}')">
         <x-header-container>
             @if (session('status') == 'verification-link-sent')
                 <div class="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
